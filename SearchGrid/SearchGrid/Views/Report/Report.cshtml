@@ -1,0 +1,179 @@
+﻿@{
+    ViewBag.Title = "Report";
+}
+
+<h2>Report</h2>
+<style type="text/css">
+    .Head2 {
+        border-top: 0;
+        display: none;
+    }
+</style>
+@*<h2 style="text-align: center;margin-bottom:20px;">Machine Repair Register Report</h2>*@
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css" />
+<link href="@Url.Content("~/Content/style2.css")" rel="stylesheet" type="text/css" />
+<form>
+    <div id="div1">
+        <h3 id="head1">Cancellation Report</h3>
+
+        <table id="table1" class="std_table bookDetailsTable" data-toggle="table"
+            data-maintain-selected="true"
+            data-sort-name="Zeitpunkt"
+            data-sort-order="asc"
+            data-search="true"
+            data-show-pagination-switch="true"
+            data-pagination="true"
+            data-page-list="[10, 25, 50, 100, ALL]"
+            data-page-size="25"
+            data-show-footer="false"
+            data-side-pagination="client"
+            data-show-export="true"
+            data-export-types="['excel', 'pdf', 'txt', 'csv']"
+            data-export-options='{
+              }'
+            data-click-to-select="true">
+            <thead>
+                <tr>
+                    <th colspan="9" class="Head2">Cancellation Report</th>
+                </tr>
+                <tr>
+                    <th>CandidateId</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>MobileNo </th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Country</th>
+                </tr>
+                @*        <tr><th class="reportHeading" colspan="11" style="padding:0px; display:none;">Heading Here</th></tr>*@
+            </thead>
+
+
+            <tbody>
+
+                @foreach (var items in @Model.listDetails)
+                {
+                    <tr>
+                        <td>@items.CandidateId</td>
+                        <td>@items.FirstName</td>
+                        <td>@items.LastName </td>
+                        <td>@items.Email</td>
+                        <td>@items.MobileNo</td>
+                        <td>@items.City</td>
+                        <td>@items.State</td>
+                        <td>@items.Country</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+    <div>
+
+        <a onclick="generate()" class="btn btn-success">Generate PDF</a>
+        <a id="excelExport" class="btn btn-success">Generate Excel</a>
+    </div>
+    <div>
+        <br />
+        <br />
+
+    </div>
+</form>
+
+<script type="text/javascript"
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/extensions/filter-control/bootstrap-table-filter-control.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/extensions/export/bootstrap-table-export.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/extensions/toolbar/bootstrap-table-toolbar.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+@*<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.0.17/jspdf.plugin.autotable.js"></script>*@
+
+<script type="text/javascript" src="~/Content/Javascript/tableExport.js"></script>
+
+<script src="https://cdn.rawgit.com/simonbengtsson/jsPDF/requirejs-fix-dist/dist/jspdf.debug.js"></script>
+<script src="https://unpkg.com/jspdf-autotable@2.3.2"></script>
+
+<script type="text/javascript">
+    function generate() {
+
+        // var doc = new jsPDF('p', 'pt');
+        var doc = new jsPDF('l', 'mm', ['200', '400']);
+
+        var res = doc.autoTableHtmlToJson(document.getElementById("table1"));
+        //doc.autoTable(res.columns, res.data, { margin: { top: 80 } });
+
+        var header = function (data) {
+            doc.setFontSize(18);
+            doc.setTextColor(40);
+            doc.setFontStyle('normal');
+            //doc.addImage(headerImgData, 'JPEG', data.settings.margin.left, 20, 50, 50);
+            doc.text("Cancellation Report", data.settings.margin.left, 50);
+        };
+
+        var options = {
+            beforePageContent: header,
+            margin: {
+                top: 80
+            },
+            startY: doc.autoTableEndPosY() + 70
+        };
+
+        doc.autoTable(res.columns, res.data, options);
+
+        doc.save("table.pdf");
+    }
+
+
+</script>
+<script>
+
+        $(function () {
+
+        debugger
+       $('.export ').click(function () {
+            $('[data-type="excel"]').hide();
+
+        })
+        var tableHead = "";
+        var headrow = '<tr><th id="headingTable" colspan="9">' + tableHead + '</th></tr>'
+
+        $('#excelExport').on('click', function () {
+            debugger
+            $('.Head2').show();
+            $('#table1').find('thead').append(headrow);
+            $('[data-type="excel"]').trigger('click');
+            $('#table1').find('#headingTable').remove();
+            $('.Head2').hide();
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

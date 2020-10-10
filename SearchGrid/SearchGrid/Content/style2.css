@@ -1,0 +1,1188 @@
+/*
+    DEMO STYLE
+*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus
+{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar
+{
+    padding: 15px 10px;
+    background: #38006b;
+    border: none;
+    border-radius: 0;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.loginPage > .navbar
+{
+    background: rgba(0,0,0,0.1);
+}
+
+.navbar-btn
+{
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.btn-menu
+{
+    color: #fff;
+    background-color: #009624;
+    transition-duration: 500ms;
+}
+
+    .btn-menu:hover, .btn-menu:focus
+    {
+        color: #fff;
+        background-color: #00c853;
+    }
+
+.dormant
+{
+    display: none;
+}
+
+.line
+{
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+.list-unstyled.CTAs
+{
+    display: none;
+}
+
+.navbar-default .navbar-nav > li > a
+{
+    color: #fafaff;
+}
+
+img.loginBG
+{
+    position: absolute;
+    z-index: -1;
+    left: -5%;
+    top: 18%;
+    width: 500px;
+    height: 250px;
+}
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#sidebar
+{
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    z-index: 999;
+    background: #fff;
+    color: #222;
+    transition: all 0.3s;
+    box-shadow: 3px 3px 10px #ccc;
+}
+
+    #sidebar.active
+    {
+        margin-left: -250px;
+    }
+
+.sidebar-header > h3
+{
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+}
+
+#sidebar .sidebar-header
+{
+    padding: 20px;
+    background-image: url("Images/1abc.jpg");
+}
+
+#sidebar ul.components
+{
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p
+{
+    color: #666;
+    padding: 10px;
+    font-weight: 600;
+}
+
+#sidebar ul li a
+{
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    margin: 2px 10px;
+}
+
+    #sidebar ul li a:hover
+    {
+        color: #7386D5;
+        background: #fff;
+    }
+
+#sidebar ul li.active > a, a[aria-expanded="true"]
+{
+    color: #fff;
+    background: #38006b;
+    box-shadow: 3px 3px 6px #ccc;
+    border-radius: 3px;
+}
+
+
+a[data-toggle="collapse"]
+{
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before
+{
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before
+{
+    content: '\e260';
+}
+
+
+ul ul a
+{
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #f1f1f1;
+}
+
+ul.CTAs
+{
+    padding: 20px;
+}
+
+    ul.CTAs a
+    {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+a.download
+{
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article, a.article:hover
+{
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content
+{
+    width: calc(100% - 250px);
+    padding: 0px 40px 40px 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+    #content.active
+    {
+        width: 100%;
+    }
+
+.mainContent
+{
+    margin-bottom: 80px;
+}
+
+
+.navHide
+{
+    width: 0px;
+    background: transparent;
+    padding: 0;
+}
+
+.navBrand > h3
+{
+    color: #fff;
+    background-color: green;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+/* ---------------------------------------------------
+    LOGIN STYLES
+----------------------------------------------------- */
+
+/*.loginFull
+{
+    height: 300px;
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 20px;
+    margin: 20% 0;
+}
+
+.loginHead
+{
+    margin-bottom: 10px;
+}
+
+.loginBody > .form-control
+{
+    margin: 10px 0px;
+}
+
+.loginFoot
+{
+    margin-top: 10px;
+}
+
+    .loginFoot > .form-control
+    {
+        margin: 10px 0px;
+    }*/
+
+.loginPage
+{
+    background: url("Images/1 (2).jpg");
+    background-size: 120%;
+    background-position: center;
+}
+
+.loginSidebar
+{
+background-color: rgba(0,0,0,0.3);
+margin-left: -5px;
+min-height: 100vh;
+color:#fff;
+}
+
+form > .col-md-12 > .form-control
+{
+margin:5px auto;
+background-color: rgba(255,255,255,0.7);
+}
+
+form > .col-md-12 > .btn
+{
+width: 100%;
+margin: 10px auto;
+}
+/* ---------------------------------------------------
+    INDEX STYLE
+----------------------------------------------------- */
+.homeContent
+{
+text-align:center;
+background-color: rgba(255,255,255,0.7);
+width: 85%;
+margin: 10px auto;
+}
+
+.homeBody
+{
+background-image:url("images/homeBG.jpg");
+margin: 0px -3% -80px -3%;
+background-size: cover;
+}
+
+.homeLogo > img
+{
+width:30%;
+}
+
+.homeFoot
+{
+padding:50px;
+margin-top: 0vh;
+margin-bottom: 21vh;
+}
+/* ---------------------------------------------------
+    CARD NARROW STYLES
+----------------------------------------------------- */
+
+
+.cardFull, .cardHead, .cardBody, .cardFoot
+{
+    width: 240px;
+}
+
+.cardFull
+{
+    height: 395px;
+    box-shadow: 2px 2px 5px #ccc;
+    border: 1px solid #eee;
+    margin: 5px 10px 15px 0px;
+    float: left;
+}
+
+    .cardFull:hover
+    {
+        cursor: pointer;
+    }
+
+.cardHead
+{
+    height: 3.5em;
+}
+
+.cardBody > img
+{
+    width: 234px;
+    margin: 0px 3px;
+}
+
+.cardHead > h4, .cardBody > p, .cardFoot > h2
+{
+    text-align: center;
+}
+
+.cardFoot > h2
+{
+    margin-top: 10px;
+}
+
+.cardBody > p
+{
+    height: 3.5em;
+}
+
+.endCardSpace
+{
+    height: 10vh;
+    float: left;
+    width: 100%;
+}
+
+
+.noStock
+{
+    display: block;
+    position: absolute;
+    background-color: rgba(255,255,255,0.8);
+    width: 240px;
+    height: 395px;
+    color: #bb3355;
+}
+
+    .noStock > h3
+    {
+        border: 3px solid #bb3355;
+        margin-top: 160px;
+        width: 185px;
+        padding: 15px;
+        margin-left: 32px;
+    }
+
+    .noStock:hover
+    {
+        cursor: default;
+    }
+
+    /* ---------------------------------------------------
+    CARD WIDE STYLES
+----------------------------------------------------- */
+.cardWideFull
+{
+background-color:#fff;
+box-shadow:5px 5px 8px #ccc;
+margin: 10px auto;
+width: 100%;
+padding: 20px 15px;
+min-height:60vh;
+}
+
+.cardWideImg
+{
+border:1px solid #eee;
+width: 100%;
+}
+
+    .cardWideImg > img
+    {
+    width: 90%;
+margin: 1% 6%;
+    }
+
+    .cardWideImg > h5
+    {
+    text-align:center;
+    }
+
+        .cardWideImg > h5 > span
+        {
+        background-color:#ddd;
+        padding:2px 5px;
+        }
+
+.cardWideImgBody
+{
+width: 15%;
+float:left;
+}
+
+    .cardWideDtlsBody > table > tbody > tr > td, .cardWideDtlsBody > table > tbody > tr > th
+    {
+    padding:20px 30px;
+    }
+
+.cardWideDtlsBody
+{
+width:70%;
+float:left;
+}
+
+.cardWideBtnBody
+{
+width:15%;
+float:left;
+}
+
+    .cardWideBtnBody > button
+    {
+    display:block;
+    margin:40% auto;
+    }
+
+.cardWideFull.cardCancelled
+{
+/*color: #fff;
+border-color: #d43f3a;*/
+border: 3px solid #d43f3a;
+box-shadow: 2px 2px 5px #d43f3a;
+background-color: rgba(255,0,0,0.1);
+}
+
+    .cardWideFull.cardCancelled > .cardWideImgBody > .cardWideImg
+    {
+    border: 1px solid #d63737;
+    }
+
+        .cardWideFull.cardCancelled > .cardWideImgBody > .cardWideImg > h5 > span
+        {
+        background-color:#d63737;
+        }
+/* ---------------------------------------------------
+    PRODUCT DESCRIPTION PAGE
+----------------------------------------------------- */
+
+.productImage
+{
+    margin-top: 40px;
+}
+
+img.productMainImage
+{
+    width: 80%;
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 5px #ccc;
+}
+
+.driverEntry
+{
+    margin-top: 30px;
+}
+
+.farmerDetails .bookingCostDetails
+{
+    font-size: 1.2em;
+    margin-top: 100px;
+}
+
+.bookingCostDetails > table, .farmerDetails > table
+{
+    width: 100%;
+}
+
+    .bookingCostDetails > table > tbody > tr > td, .farmerDetails > table > tbody > tr > td
+    {
+        padding: 8px 15px;
+    }
+
+        .bookingCostDetails > table > tbody > tr > td:first-child
+        {
+            width: 60%;
+            font-weight: 600;
+        }
+
+        .farmerDetails > table > tbody > tr > td:first-child
+        {
+            width: 60%;
+            font-weight: 600;
+        }
+
+.detailSwitcher
+{
+    margin: 20px 0px 0px 0px;
+}
+
+    .detailSwitcher > ul > li > a[aria-expanded="true"]::before, .detailSwitcher > ul > li > a[aria-expanded="false"]::before
+    {
+        content: ' ';
+    }
+
+.driverBtn
+{
+    width: 100%;
+}
+
+    .driverBtn > input
+    {
+        width: 40%;
+        margin: 1% 3%;
+    }
+
+.backBtn
+{
+    margin-top: 10px;
+}
+
+.table.bookDetailsTable > tbody > tr > td
+{
+    border-top: 0px solid;
+}
+
+    .table.bookDetailsTable > tbody > tr > td > img
+    {
+        /*box-shadow: 2px 3px 5px #ccc;*/
+    }
+
+.table.bookDetailsTable > tbody > tr
+{
+background-color: #fff;
+border: 1px solid #eee;
+box-shadow: 2px 2px 5px #ccc;
+margin: 5px auto;
+}
+
+.table.bookDetailsTable > tbody > tr:hover
+{
+    cursor: pointer;
+}
+
+.table.bookDetailsTable > thead > tr > th
+{
+   background-color:#38006b;
+color:#fff;
+    padding: 12px 8px;
+    box-shadow: 5px 3px 5px #ccc;
+}
+
+/* ---------------------------------------------------
+    Error Pages
+----------------------------------------------------- */
+
+.svgExc
+    {
+    display:none;
+    width: 90%;
+margin: 50px auto;
+    }
+
+.svgHead {
+    width: 400px;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    margin: 10% 40%;
+}
+
+
+ .svgFoot {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #fff;
+            margin: 30% 0%;
+            z-index:3;
+        }
+
+       
+        
+        .oopsSvg{
+            background-color: darkred;
+            width: 50%;
+            margin-left:20%;
+        }
+
+.svgContent.active > .mainContent > .svgContainer > .roadSvg > .oopsSvg
+{
+    margin-left:30%;
+}
+
+
+/* ---------------------------------------------------
+    REPORT STYLES
+----------------------------------------------------- */
+
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover,
+.pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #38006b;
+    border-color: #38006b;
+}
+
+
+th.reportHeading > .th-inner{
+font-size:0.1em;
+padding:0px !important;
+line-height:0px !important;
+}
+
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px)
+{
+    .container
+    {
+        padding-left: 0px;
+    }
+
+    #sidebar
+    {
+        margin-left: -250px;
+        height: 100%;
+    }
+
+        #sidebar.active
+        {
+            margin-left: 0;
+        }
+
+    #content
+    {
+        width: 100%;
+        padding: 10px;
+    }
+
+        #content.active
+        {
+            width: calc(100% - 250px);
+        }
+
+    #sidebarCollapse span
+    {
+        display: none;
+    }
+
+    .list-unstyled.CTAs
+    {
+        display: block;
+    }
+
+    .navHide
+    {
+        width: 100%;
+        background: #38006b;
+        padding: 5px;
+    }
+
+    .cardFull, .cardHead, .cardBody, .cardFoot
+    {
+        width: 100%;
+    }
+
+        .cardBody > img
+        {
+            width: 94%;
+            margin: 0px 3%;
+        }
+
+    .cardFull
+    {
+        height: 80vh;
+    }
+
+    .noStock
+    {
+        width: 94%;
+        height: 79vh;
+    }
+
+        .noStock > h3
+        {
+            margin-left: 25%;
+        }
+
+    .loginPage
+    {
+        background: url("Images/lgnM.jpg");
+        background-size: 120%;
+        background-position: center;
+    }
+
+    img.loginBG
+    {
+        position: absolute;
+        z-index: -1;
+        left: -5%;
+        top: 17%;
+        width: 475px;
+        height: 250px;
+    }
+
+    .loginSidebar
+    {
+    text-align:center;
+    min-height:45vh;
+    max-height:50vh;
+    }
+
+    
+        #content.svgContent
+        {
+        width: calc(100% - 0px);
+        }
+
+    .roadSvg
+    {
+    display:none;
+    }
+
+    .svgExc
+    {
+    display:block;
+    }
+
+    .svgHead
+    {
+    width: 100%;
+    margin: 20% 0%;
+    }
+}
+
+
+
+/*iPhone 6 Plus*/
+@media (max-width: 500px)
+{
+    img.loginBG
+    {
+        left: -5%;
+        top: 14%;
+        width: 380px;
+    }
+
+    .cardFull
+    {
+    margin:1%;
+    }
+
+    .cardWideImgBody
+    {
+        width: 100%;
+        clear:both;
+    }
+
+    .cardWideImg {
+    width: 50%;
+    float: left;
+
+}
+
+    .cardWideDtlsBody
+    {
+    width:100%;
+    clear:both;
+    }
+
+    .cardWideDtlsBody > table > tbody > tr > td {
+    padding: 2px 3px;
+}
+
+     .cardWideDtlsBody > table > tbody > tr > th {
+    padding: 2px 3px;
+    width:40%;
+}
+
+    .cardWideBtnBody {
+    width: 100%;
+    float:none;
+    clear:both;
+    margin-bottom:40px;
+}
+    .cardWideBtnBody > button {
+
+    display: inline-block;
+    margin: 2px 5px;
+    float: left;
+
+}
+
+    .cardWideFull
+    {
+    height:470px;
+    }
+
+    .cardWideFull.history
+    {
+    height:400px;
+    }
+}
+
+/*Galaxy S7*/
+@media (max-width: 361px)
+{
+    img.loginBG
+    {
+        left: -5%;
+        top: 13%;
+        width: 335px;
+    }
+    .cardFull
+    {
+    margin:1%;
+    }
+
+    .cardWideImgBody
+    {
+        width: 100%;
+        clear:both;
+    }
+
+    .cardWideImg {
+    width: 50%;
+    float: left;
+
+}
+
+    .cardWideDtlsBody
+    {
+    width:100%;
+    clear:both;
+    }
+
+    .cardWideDtlsBody > table > tbody > tr > td {
+    padding: 2px 3px;
+}
+
+    .cardWideDtlsBody > table > tbody > tr > th {
+    padding: 2px 3px;
+    width:40%;
+}
+    .cardWideBtnBody {
+    width: 100%;
+    float:none;
+    clear:both;
+    margin-bottom:40px;
+}
+    .cardWideBtnBody > button {
+
+    display: inline-block;
+    margin: 2px 5px;
+    float: left;
+
+}
+
+    .cardWideFull
+    {
+    height:450px;
+    }
+
+    .cardWideFull.history
+    {
+    height:400px;
+    }
+    
+}
+
+@media (min-width: 1200px)
+{
+    .container
+    {
+        width: 100%;
+    }
+}
+
+/*iPad*/
+@media (min-width: 1024px)
+{
+   
+    .cardFull
+    {
+    margin:1% 2% 3% 5%;
+    }
+
+    img.loginBG
+    {
+    left:1%;
+    }
+
+    .homeContent
+    {
+    margin:10px;
+    }
+
+    .cardWideFull
+    {
+    width: 295px;
+background-color: #fff;
+box-shadow: 5px 5px 8px #ccc;
+margin: 8px;
+padding: 20px 10px;
+min-height:499px;
+height: 520px;
+float: left;
+    }
+
+    .cardWideFull.history
+    {
+    height:450px;
+    }
+
+    .cardWideImgBody {
+    width: 100%;
+    clear: both;
+}
+
+    .cardWideImg {
+    width: 50%;
+    float: left;
+}
+
+    .cardWideDtlsBody {
+    width: 100%;
+    clear: both;
+}
+
+    .cardWideBtnBody {
+    width: 100%;
+    float: none;
+    clear: both;
+    margin-bottom: 40px;
+}
+    .cardWideBtnBody > button {
+    display: inline-block;
+    margin: 2px 5px;
+    float: left;
+}
+    .cardWideDtlsBody > table > tbody > tr > td {
+    padding:5px;
+}
+
+     .cardWideDtlsBody > table > tbody > tr > th {
+    padding: 5px;
+    width:40%;
+}
+
+    .cardWideDtlsBody > table
+    {
+    height:250px;
+    }
+
+    #content.svgContent
+        {
+        width: calc(100% - 250px);
+        }
+
+        #content.svgContent.active
+        {
+       width: calc(100% - 0px);
+             }
+    .roadSvg
+    {
+    display:none;
+    }
+
+    .svgExc
+    {
+    display:block;
+    }
+
+    .svgHead
+    {
+    width: 100%;
+    margin: 20% 0%;
+    }
+}
+
+/*FullHD Big Screens*/
+@media (min-width: 1280px)
+{
+    .cardFull
+    {
+    margin:1% 5% 3% 0%;
+    }
+
+    img.loginBG
+    {
+    left:-9%;
+    top:17%;
+    }
+
+    .homeContent
+    {
+    margin:10px auto;
+    }
+}
+
+/*Common Screens*/
+@media (min-width: 1335px)
+{
+    .cardFull
+    {
+    margin:1% 1% 3% 0%;
+    }
+
+    img.loginBG
+    {
+    left:-6%;
+    top:18%;
+    }
+
+    .homeContent
+    {
+    margin:10px auto;
+    }
+
+    #content.svgContent
+        {
+        width: calc(100% - 250px);
+        }
+
+    #content.svgContent.active
+        {
+       width: calc(100% - 0px);
+             }
+
+    .roadSvg
+    {
+    display:block;
+    }
+
+    .svgExc
+    {
+    display:none;
+    }
+
+    .svgHead
+    {
+    width: 100%;
+    margin: 20% 0%;
+    }
+}
+
+/*MacBook Air*/
+@media (min-width: 1440px)
+{
+    img.loginBG
+    {
+    left: -3%;
+top: 19%;
+width:500px;
+    }
+
+    .cardFull
+    {
+    margin:1% 2% 3% 0%;
+    }
+
+    .homeContent
+    {
+    margin:10px auto;
+    }
+
+  
+}
+
+
+/*Big Monitors*/
+@media (min-width: 1680px)
+{
+    
+
+    img.loginBG
+    {
+    left: 1%;
+top: 20%;
+width: 550px;
+    }
+
+    .cardFull
+    {
+    margin:1% 2% 3% 0%;
+    }
+
+    .homeContent
+    {
+    margin:10px auto;
+    }
+
+    .homeFoot
+    {
+    margin-bottom: 42vh;
+    }
+
+    #sidebar
+    {
+    height:93vh;
+    }
+
+   
+    .cardWideDtlsBody > table > tbody > tr > td, .cardWideDtlsBody > table > tbody > tr > th {
+
+    /*padding: 10px;*/
+
+}
+}
